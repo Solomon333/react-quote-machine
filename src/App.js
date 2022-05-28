@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons';
 import { FaTwitter } from "react-icons/fa";
 import './App.scss'
 import colorsArr from './colorsArray'
-
+import { Link } from "react-router-dom";
 
 
 let quoteData = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
@@ -45,11 +45,12 @@ function App(){
     setQuote(quotesArr[random].quote)
     setAuthor(quotesArr[random].author)
   }
-
+ 
    return (
       <div className='App' style={
         {backgroundColor:changeColor,
       color:changeColor}}>
+        <Link to="/about"></Link>
         <div id='quote-box' >
         <p id='text' style={{
           color:changeColor}}>
